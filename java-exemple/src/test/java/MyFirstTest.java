@@ -21,9 +21,10 @@ public class MyFirstTest {
 
     @Test
     public void myFirstTest() {
-        driver.get("https://www.google.ru/");
-        driver.findElement(By.name("q")).sendKeys("webdriver");
-        driver.findElement(By.name("btnK")).click();
+        driver.get("http://localhost/litecart/admin/");
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.findElement(By.name("login")).click();
         //wait.until(titleIs("webdriver - Поиск в Google"));
     }
 

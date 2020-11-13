@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MyFirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-11T10:37:56" hostname="DESKTOP-4QG8J8H" time="6.147">
+<testsuite name="MyFirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-13T06:40:55" hostname="DESKTOP-4QG8J8H" time="5.916">
   <properties/>
-  <testcase name="myFirstTest" classname="MyFirstTest" time="6.147"/>
+  <testcase name="myFirstTest" classname="MyFirstTest" time="5.916"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 34576
+  <system-err><![CDATA[Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 34942
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-ноя 11, 2020 1:38:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+ноя 13, 2020 9:40:58 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
