@@ -1,12 +1,18 @@
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.rules.Timeout;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 public class MyFirstTest {
 
@@ -16,17 +22,23 @@ public class MyFirstTest {
     @Before
     public void start() {
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
+        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 1000);
     }
 
     @Test
-    public void myFirstTest() {
-        driver.get("http://localhost/litecart/admin/");
-        driver.findElement(By.name("username")).sendKeys("admin");
-        driver.findElement(By.name("password")).sendKeys("admin");
-        driver.findElement(By.name("login")).click();
-        //wait.until(titleIs("webdriver - Поиск в Google"));
+    public void MyFirstTest() throws InterruptedException {
+        driver.get("http://localhost/litecart/");
+        List<WebElement> product;
+        product = driver.findElements(new By.ByCssSelector(".product"));
+        for (int i = 0; i < product.size(); i++) {
+            product.get(i).findElement(By.xpath(".//div[contains(@class,'sticker')]"));
+        }
     }
+
+
+
+
 
     @After
     public void stop() {
